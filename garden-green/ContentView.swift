@@ -6,19 +6,49 @@
 //
 
 import SwiftUI
+import SwiftData
 
 struct ContentView: View {
+    @Environment(\.modelContext) private var context
+    @Query private var vegetables: [Vegetable]
+    @State private var name = ""
+    
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundStyle(.tint)
-            Text("Hello, world!")
+        NavigationStack {
+            VStack {
+                TextField("Name", text: $name)
+                    .textFieldStyle(.roundedBorder)
+                    .onSubmit {
+                        let newGarden = Vegetable(name: name)
+                        context.insert(newGarden)
+                        name = ""
+                    }
+                Spacer()
+                List {
+                    ForEach(vegetables) { vegetable in
+                        NavigationLink {
+                            NoteListScreen(vegetable: vegetable)
+                        } label: {
+                            Text(vegetable.name)
+                        }
+                    }
+                    .onDelete { indexSet in
+                        for index in indexSet {
+                            let vegetable = vegetables[index]
+                            context.delete(vegetable)
+                        }
+                    }
+                }
+            }
+            .padding()
+        .navigationTitle("Garden Greens")
         }
-        .padding()
     }
 }
 
-#Preview {
-    ContentView()
+#Preview { @MainActor in
+    NavigationStack {
+        ContentView()
+            .modelContainer(previewContainer)
+    }
 }

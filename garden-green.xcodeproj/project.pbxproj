@@ -11,6 +11,10 @@
 		2880BD8F2AEF86CF00B1A565 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2880BD8E2AEF86CF00B1A565 /* ContentView.swift */; };
 		2880BD912AEF86D000B1A565 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2880BD902AEF86D000B1A565 /* Assets.xcassets */; };
 		2880BD942AEF86D000B1A565 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2880BD932AEF86D000B1A565 /* Preview Assets.xcassets */; };
+		2880BD9C2AEF872F00B1A565 /* Vegetable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2880BD9B2AEF872F00B1A565 /* Vegetable.swift */; };
+		2880BD9E2AEF8B1700B1A565 /* Note.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2880BD9D2AEF8B1700B1A565 /* Note.swift */; };
+		2880BDA12AEF8C3D00B1A565 /* NoteListScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2880BDA02AEF8C3D00B1A565 /* NoteListScreen.swift */; };
+		2880BDA32AEF8F4200B1A565 /* PreviewContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2880BDA22AEF8F4200B1A565 /* PreviewContainer.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +23,12 @@
 		2880BD8E2AEF86CF00B1A565 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		2880BD902AEF86D000B1A565 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2880BD932AEF86D000B1A565 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		2880BD9B2AEF872F00B1A565 /* Vegetable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Vegetable.swift; sourceTree = "<group>"; };
+		2880BD9D2AEF8B1700B1A565 /* Note.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Note.swift; sourceTree = "<group>"; };
+		2880BDA02AEF8C3D00B1A565 /* NoteListScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteListScreen.swift; sourceTree = "<group>"; };
+		2880BDA22AEF8F4200B1A565 /* PreviewContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreviewContainer.swift; sourceTree = "<group>"; };
+		2880BDA42AEF989500B1A565 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		2880BDA52AEF994600B1A565 /* garden-green.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "garden-green.entitlements"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,6 +61,10 @@
 		2880BD8B2AEF86CF00B1A565 /* garden-green */ = {
 			isa = PBXGroup;
 			children = (
+				2880BDA52AEF994600B1A565 /* garden-green.entitlements */,
+				2880BDA42AEF989500B1A565 /* Info.plist */,
+				2880BD9F2AEF8C1200B1A565 /* View */,
+				2880BD9A2AEF871800B1A565 /* Model */,
 				2880BD8C2AEF86CF00B1A565 /* garden_greenApp.swift */,
 				2880BD8E2AEF86CF00B1A565 /* ContentView.swift */,
 				2880BD902AEF86D000B1A565 /* Assets.xcassets */,
@@ -63,8 +77,26 @@
 			isa = PBXGroup;
 			children = (
 				2880BD932AEF86D000B1A565 /* Preview Assets.xcassets */,
+				2880BDA22AEF8F4200B1A565 /* PreviewContainer.swift */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		2880BD9A2AEF871800B1A565 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				2880BD9B2AEF872F00B1A565 /* Vegetable.swift */,
+				2880BD9D2AEF8B1700B1A565 /* Note.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		2880BD9F2AEF8C1200B1A565 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				2880BDA02AEF8C3D00B1A565 /* NoteListScreen.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -137,8 +169,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2880BDA32AEF8F4200B1A565 /* PreviewContainer.swift in Sources */,
+				2880BDA12AEF8C3D00B1A565 /* NoteListScreen.swift in Sources */,
 				2880BD8F2AEF86CF00B1A565 /* ContentView.swift in Sources */,
+				2880BD9C2AEF872F00B1A565 /* Vegetable.swift in Sources */,
 				2880BD8D2AEF86CF00B1A565 /* garden_greenApp.swift in Sources */,
+				2880BD9E2AEF8B1700B1A565 /* Note.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -269,12 +305,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "garden-green/garden-green.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"garden-green/Preview Content\"";
 				DEVELOPMENT_TEAM = 3Y6T2CFAZ5;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "garden-green/Info.plist";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -298,12 +336,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "garden-green/garden-green.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"garden-green/Preview Content\"";
 				DEVELOPMENT_TEAM = 3Y6T2CFAZ5;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "garden-green/Info.plist";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
